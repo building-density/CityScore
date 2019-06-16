@@ -1,1 +1,21 @@
-   
+//add source docs//   
+
+
+
+//leaflet-areaselect//
+   var areaSelect = L.areaSelect({width:200, height:300});
+   areaSelect.addTo(map);
+
+   // Read the bouding box
+   var bounds = areaSelect.getBounds();
+
+   // Get a callback when the bounds change
+   areaSelect.on("change", function() {
+       console.log("Bounds:", this.getBounds());
+   });
+
+
+//leaflet-measure// 
+   var myMap = L.map('mapElementId', {
+     measureControl: true, primaryLengthUnit: 'kilometers'
+   });
